@@ -57,7 +57,7 @@ type CreateShortUrlPageProps = ShortenerState &
 
 export const CreateShortUrlPage = (props: CreateShortUrlPageProps) => {
   const [errors, setErrors] = useState({} as CreateShortUrlError);
-  const [givenUrl, setGivenUrl] = useState("www.google.ca");
+  const [givenUrl, setGivenUrl] = useState("");
   const [givenSlug, setGivenSlug] = useState("");
 
   const classes = useStyles();
