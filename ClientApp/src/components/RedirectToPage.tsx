@@ -35,8 +35,8 @@ export const RedirectToPage = (props: RedirectToPageProps) => {
   useEffect(() => {
     if (shortUrl.url) {
       const redirectUrl =
-        shortUrl.url.indexOf("http://") > 0 ||
-        shortUrl.url.indexOf("https://") > 0
+        shortUrl.url.startsWith("http://") ||
+        shortUrl.url.startsWith("https://")
           ? shortUrl.url
           : `http://${shortUrl.url}`;
       window.location.replace(redirectUrl);
